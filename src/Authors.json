@@ -1,0 +1,52 @@
+{
+  "authors": [
+    {
+      "name": "Mark Twain",
+      "imageUrl": "images/authors/ali.jpeg",
+      "imageSource": "Wikimedia Commons",
+      "books": ["The Adventures of Finn", "The Adventures", "Social Network", "Workday"]
+    },
+    {
+      "name": "Mangal Pandey",
+      "imageUrl": "images/authors/Alice_Walker.jpeg",
+      "imageSource": "Wikimedia Commons",
+      "books": ["Hamlet", "The Adventure", "Social Network 2", "Workday 1"]
+    },
+    {
+      "name": "Charles Dicken",
+      "imageUrl": "images/authors/Betty_Smith.jpeg",
+      "imageSource": "Wikimedia Commons",
+      "books": ["The Adventures of Finn 2", "Macbeth", "Social Network 2", "Workday 2"]
+    },
+    {
+      "name": "Hawkins",
+      "imageUrl": "images/authors/Book_Por.jpeg",
+      "imageSource": "Wikimedia Commons",
+      "books": ["The Shining", "The Adventures 2", "The tale of two city", "Workday 3"]
+    },
+    {
+      "name": "Grant Elliot's",
+      "imageUrl": "images/authors/Eric_Carle.jpeg",
+      "imageSource": "Wikimedia Commons",
+      "books": ["IT", "The Adventures 3", "Macbeth 2", "Workday 4"]
+    },
+    {
+      "name": "William Shakespeare",
+      "imageUrl": "images/authors/Judy_Blume.jpeg",
+      "imageSource": "Wikimedia Commons",
+      "books": ["The Adventures of Finn 4", "David copperfield", "Social Network 4", "Workday 4"]
+    },
+    {
+      "name": "Chetan Bhagat",
+      "imageUrl": "images/authors/Victor.jpeg",
+      "imageSource": "Wikimedia Commons",
+      "books": ["Hornet 3", "Life of pie", "Social Network 5", "Half girlfriend"]
+    },
+    {
+      "name": "David Cooper",
+      "imageUrl": "images/authors/Victor_Hugo.jpeg",
+      "imageSource": "Wikimedia Commons",
+      "books": ["The Adventures 6", "Life of pie 3", "Social Network 7", "City Lights"]
+    }
+  ]
+}
