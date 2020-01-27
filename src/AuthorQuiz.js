@@ -11,14 +11,15 @@ function Hero() {
             <div className="jumbotron col-10 offset-1">
                 <h1>Author Quiz</h1>
                 <p>Select the book written by author shown:</p>
+                <p style={{float: "right"}}><Link to="/add">ADD AN AUTHOR</Link></p>
             </div>
         </div>
     )
 }
 
-function Book({title, highlight, onClick}) {
+function Book({title, selectedBook, highlight, onClick}) {
     return (
-        <div className="answer" style={{backgroundColor: highlightToBGColor(highlight)}} onClick={() => onClick(title)}>
+        <div className="answer" style={selectedBook === title ? {backgroundColor: highlightToBGColor(highlight), disabled: "true"} : null} onClick={() => onClick(title)}>
             <h4>{title}</h4>
         </div>
     )
@@ -34,14 +35,14 @@ function highlightToBGColor(highlight) {
 
 }
 
-function Turn({author, books, highlight, onAnswerSelected}) {
+function Turn({author, books, highlight, onAnswerSelected, selectedBook}) {
     return (
         <div className="row turn">
             <div className="col-4 offset-1">
                 <img src={author.imageUrl} className="authorImage" alt="Author" />
             </div>
             <div className="col-6">
-                {books.map((name) => <Book title={name} key={name} onClick={onAnswerSelected} highlight={highlight} /> )}
+                {books.map((name) => <Book title={name} key={name} onClick={onAnswerSelected} highlight={highlight} selectedBook={selectedBook}/> )}
             </div>
         </div>
     );
@@ -87,9 +88,8 @@ class AuthorQuiz extends Component {
     return (
         <div className="container-fluid">
             <Hero />
-            <Turn {...this.props.data} highlight={this.props.highlight} onAnswerSelected={this.props.onAnswerSelected} />
+            <Turn {...this.props.data} selectedBook={this.props.title} highlight={this.props.highlight} onAnswerSelected={this.props.onAnswerSelected} />
             <Continue show={this.props.highlight === 'correct'} onContinue={this.props.onContinue} />
-            <p><Link to="/add">ADD AN AUTHOR</Link></p>
             <Footer />
         </div>
     );

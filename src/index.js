@@ -12,7 +12,8 @@ let propData = resetState();
 function resetState() {
     return {
         data: getData(AuthorList["authors"]),
-        highlight: ''
+        highlight: '',
+        title: ''
     };
 }
 
@@ -29,8 +30,17 @@ function getData(authors) {
 }
 
 function onAnswerSelected(answer) {
-    let isCorrect = propData.data.books.some(book => book === answer);
+    let authors = AuthorList["authors"];
+    let isCorrect;
+    for (var i =0; i<authors.length; i++) {
+        let index = authors[i].books.indexOf(answer);
+        if (index !== -1) {
+            isCorrect = propData.data.author.name === authors[i].name;
+            break;
+        }
+    }
     propData.highlight = isCorrect ? 'correct' : 'wrong';
+    propData.title = answer;
     render();
 }
 
